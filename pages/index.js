@@ -20,14 +20,19 @@ export default function Home() {
           <div className={styles.card}>
             <h2>Selected</h2>
             <ul>
-              
+              <li> Spain </li>
+              <li> Russia </li>
             </ul>
           </div>
 
           <div className={styles.card}>
             <h2>Choose From</h2>
             <ul>
-
+                <li> USA </li>
+                <li> Russia </li>
+                <li> Germany </li>
+                <li> Spain </li>
+                <li> Finland </li>  
             </ul>
           </div>
 
