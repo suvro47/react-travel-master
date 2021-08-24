@@ -9,7 +9,7 @@ function ActionItem({props}){
 }*/
 
 /* distructuring */
-function ActionItem({label, action}){
+function ActionItem({label, action, handleChange}){
   return <li> {label} <a href="#">{action}</a></li> 
 }
 
@@ -52,7 +52,7 @@ export default function Home() {
             <h2>Selected</h2>
             <ul>
               {
-                selectedCountries.map( country => <ActionItem key={country} label={country} action="-"/> )
+                selectedCountries.map( country => <ActionItem key={country} label={country} action="-" handleChange={removeHandle}/> )
               }
             </ul>
           </div>
@@ -61,7 +61,7 @@ export default function Home() {
             <h2>Choose From</h2>
             <ul>
               {
-                allCountries.map( country => <ActionItem key={country} label={country} action="+"/> )
+                allCountries.map( country => <ActionItem key={country} label={country} action="+" handleChange={addHandle} /> )
               }
             </ul>
           </div>
