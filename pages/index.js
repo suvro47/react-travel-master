@@ -2,6 +2,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+/*
+function ActionItem({props}){
+    return <li> {props.label} <a href="#">{props.action}</a></li> 
+}*/
+
+/* distructuring */
+function ActionItem({label, action}){
+  return <li> {label} <a href="#">{action}</a></li> 
+}
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -20,19 +30,19 @@ export default function Home() {
           <div className={styles.card}>
             <h2>Selected</h2>
             <ul>
-              <li> Spain <a href="#">-</a></li>
-              <li> Russia <a href="#">-</a></li>
+                <ActionItem label="Spain" action="-"/>
+                <ActionItem label="Russia" action="-"/>
             </ul>
           </div>
 
           <div className={styles.card}>
             <h2>Choose From</h2>
             <ul>
-                <li> America <a href="#">+</a></li>
-                <li> Russia <a href="#">+</a></li>
-                <li> Germany <a href="#">+</a></li>
-                <li> Spain <a href="#">+</a> </li>
-                <li> Finland <a href="#">+</a></li>  
+                <ActionItem label="America" action="+"/>
+                <ActionItem label="Russia" action="+"/>
+                <ActionItem label="Germany" action="+"/>
+                <ActionItem label="Spain" action="+"/>
+                <ActionItem label="Finland" action="+"/>
             </ul>
           </div>
 
