@@ -10,7 +10,7 @@ function ActionItem({props}){
 
 /* distructuring */
 function ActionItem({label, action, handleChange}){
-  return <li> {label} <a href="#">{action}</a></li> 
+  return <li> {label} <a href="#" onClick={ e => e.preventDefault()}>{action}</a></li> 
 }
 
 const allCountries = [
