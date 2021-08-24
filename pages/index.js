@@ -44,7 +44,7 @@ export default function Home() {
             <h2>Selected</h2>
             <ul>
               {
-                selectedCountries.map( country => <ActionItem label={country} action="-"/> )
+                selectedCountries.map( country => <ActionItem key={country} label={country} action="-"/> )
               }
             </ul>
           </div>
@@ -53,7 +53,7 @@ export default function Home() {
             <h2>Choose From</h2>
             <ul>
               {
-                allCountries.map( country => <ActionItem label={country} action="+"/> )
+                allCountries.map( country => <ActionItem key={country} label={country} action="+"/> )
               }
             </ul>
           </div>
