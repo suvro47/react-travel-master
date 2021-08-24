@@ -25,6 +25,15 @@ export default function Home() {
 
   const [selectedCountries , setSelectedCountries] = useState([]);
 
+  function addHandle(label){
+    setSelectedCountries( selectedCountries.concat(label) );
+  }
+
+  function removeHandle(label){
+    const updateList = selectedCountries.filter( c => c !== label); 
+    setSelectedCountries(updateList);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
